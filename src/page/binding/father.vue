@@ -2,7 +2,9 @@
 <template>
   <div>
     <input type="text" v-model="parentSelect"></input>
-    <childDemo :value="parentSelect" @event="change"></childDemo>
+    
+    <childDemo :value.sync="parentSelect"></childDemo>
+    
   </div>
 </template>
 //
@@ -19,20 +21,11 @@ export default {
         parentSelect: '',
       }
     },
-    
-    methods: {
-      change: function(value){
-        this.parentSelect = value;
-      }
-    },
-    
-    watch:{
-    	value:function(newVal,oldVal){
-    		 this.parentSelect = newVal;
-    	}
-    }
-    
-    
-    
+    watch: {
+			parentSelect: function(newVal, oldVal) {
+				console.log(this.parentSelect)
+			}
+			
+		}
 }
 </script>
