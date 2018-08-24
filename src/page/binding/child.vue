@@ -19,7 +19,7 @@
 				this.childVal = newVal;
 			},
 			
-			childVal: function(newVal, oldVal) {
+			'childVal': function(newVal, oldVal) {
 				this.$emit("update:value", newVal);
 			}
 			

@@ -20,12 +20,6 @@ export default {
       return {
         parentSelect: '',
       }
-    },
-    watch: {
-			parentSelect: function(newVal, oldVal) {
-				console.log(this.parentSelect)
-			}
-			
-		}
+    }
 }
 </script>

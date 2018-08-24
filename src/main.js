@@ -4,6 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import childOne from './page/middleware/childOne'
+import childTwo from './page/middleware/childTwo'
+
+Vue.component('childOne', childOne)
+Vue.component('childTwo', childTwo)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
